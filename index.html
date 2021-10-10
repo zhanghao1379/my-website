@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>随记</title>
+  <title>~~~~</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <!--<meta itemprop="image" content="./images/fenxiang.png" />-->
@@ -192,10 +192,10 @@
             requestFrame.call(window, this.render.bind(this))
           },
           adjustCanvas: function () {
-            canvas.width = window.innerWidth - 100;
+            canvas.width = window.innerWidth - 50;
             canvas.height = window.innerHeight - 30;
-            canvas2.width = window.innerWidth - 100;
-            canvas2.height = window.innerHeight - 30;
+            canvas2.width = window.innerWidth - 50;
+            canvas2.height = window.innerHeight - 50;
           },
           render: function () {
             context.clearRect(0, 0, canvas.width, canvas.height)
@@ -212,7 +212,7 @@
           text,
           // words = ['love'],
           words = ['ting', 'I.m', 'hao', 'thanks', 'for', 'meeting', 'love'],
-          fontSize = 500,
+          fontSize = 300,
           canvas = document.querySelector('canvas'),
           context = canvas.getContext('2d'),
           fontFamily = 'Avenir, Helvetica Neue, Helvetica, Arial, sans-serif',
@@ -226,8 +226,8 @@
             context.textBaseline = "middle"
             context.fillStyle = 'white'
             size = Math.min(fontSize,
-              (canvas.width / context.measureText(text).width) * 0.8 * fontSize,
-              (canvas.height / fontSize) * (isNumber(text) ? 1 : 0.45) * fontSize)
+              (canvas.width / context.measureText(text).width) * 0.3 * fontSize,
+              (canvas.height / fontSize) * (isNumber(text) ? 1 : 0.15) * fontSize)
             context.font = 'bold ' + size + 'px ' + fontFamily
             context.clearRect(0, 0, canvas.width, canvas.height)
             switch (text) {
@@ -251,7 +251,7 @@
           },
           // 画一个爱心
           drawLove() {
-            var r = 16,
+            var r = 4,
               radian, //弧度  
               radianDecrement = Math.PI / 180,
               time = 10,
@@ -289,8 +289,8 @@
           canvas = document.querySelector('canvas'),
           context = canvas.getContext('2d'),
           text,
-          gap = 12,
-          gapR = 6,
+          gap = 4,
+          gapR = 2,
           innerter
         return {
           init: function (l) {
